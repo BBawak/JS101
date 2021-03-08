@@ -20,7 +20,7 @@ while (true) {
 
   let loanAmount = readline.question();
   while (isInvalidNumber(loanAmount)) {
-  prompt(MESSAGE['error']);
+    prompt(MESSAGE['error']);
     loanAmount = readline.question();
   }
 
@@ -43,20 +43,20 @@ while (true) {
 
   let annualInterestRate = Number(interestRate) / 100;
   let monthlyInterestRate = annualInterestRate / 12;
-  let numberOfMonths = Number(years) * 12;
+  let months = Number(years) * 12;
 
   let monthlyPayment = Number(loanAmount) *
                   (monthlyInterestRate /
-                  (1 - Math.pow((1 + monthlyInterestRate), (-Number(numberOfMonths)))));
+                  (1 - Math.pow((1 + monthlyInterestRate), (-Number(months)))));
 
   prompt(`Your monthly payment is: $${monthlyPayment.toFixed(2)}`);
-  prompt(`Estimated number of months to pay off the loan is  : ${numberOfMonths}`)
+  prompt(`Estimated number of months to pay off the loan is  : ${months}`);
 
   prompt(MESSAGE['continue']);
   let answer = readline.question().toLowerCase();
   while (answer[0] !== 'n' && answer[0] !== 'y') {
     prompt('Please enter "y" or "n".');
-    answer = readline.question().toLowerCase();Nu
+    answer = readline.question().toLowerCase();
   }
 
   if (answer[0] === 'n') break;
