@@ -1,0 +1,10 @@
+{
+    "welcome": "Welcome to Mortgage Calculator",
+  "loanAmountQuestion":"What is the loan amount",
+  "error": "Must enter a positive number",
+   "durationOfYearsQuestion": "What is the loan duration (in years)?",
+    "interestRateQuestion":"What is the interest rate",
+    "invalidNumber":"Ohh Oh... that doesn't look like a valid number.\n Please enter a valid Number",
+   "selectOperation" :"What operation would you like to perform?\n1) Add 2) Subtract 3) Multiply 4) Divide",
+   "continue":"Would you like to perform another operation? (y/n)"
+}
